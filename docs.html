@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Traffic AI Lab - Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo"><i class="fas fa-traffic-light"></i> Open Traffic AI Lab</a>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="challenges.html">Challenges</a></li>
+            <li><a href="leaderboard.html">Leaderboard</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="docs.html" class="active">Documentation</a></li>
+            <li><a href="community.html">Community</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero-section short">
+        <h1>Documentation</h1>
+        <p>Comprehensive guides and resources for participants and partners.</p>
+    </header>
+
+    <div class="container docs-section">
+        <div class="docs-sidebar">
+            <ul>
+                <li><a href="#getting-started" class="active">Getting Started</a></li>
+                <li><a href="#challenge-guidelines">Challenge Guidelines</a></li>
+                <li><a href="#data-formats">Data Formats</a></li>
+                <li><a href="#model-submission">Model Submission</a></li>
+                <li><a href="#evaluation-metrics">Evaluation Metrics</a></li>
+                <li><a href="#api-reference">API Reference</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="docs-content">
+            <section id="getting-started" class="section-spacing" style="padding-top: 0;">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Getting Started</h2>
+                <p>Welcome to the Open Traffic AI Lab documentation! This guide will help you set up your environment and make your first submission.</p>
+                <h3>1. Account Creation</h3>
+                <p>First, create an account on our platform. This will allow you to track your progress, submit models, and interact with the community.</p>
+                <h3>2. Choose a Challenge</h3>
+                <p>Browse the <a href="challenges.html">Challenges page</a> to find an active challenge that aligns with your interests and skills. Each challenge page provides a detailed description, dataset links, and evaluation criteria.</p>
+                <h3>3. Download Starter Kit</h3>
+                <p>For each challenge, we provide a starter kit, typically a Colab-ready Jupyter notebook, that includes baseline code, data loading examples, and a basic model implementation. This helps you quickly get started.</p>
+                <h3>4. Develop Your Model</h3>
+                <p>Train your AI model using the provided dataset. You can use any framework (TensorFlow, PyTorch, etc.) and develop locally or on cloud platforms.</p>
+                <h3>5. Make Your First Submission</h3>
+                <p>Once your model is trained, follow the model submission guidelines to upload your model or containerized code. Our system will automatically evaluate your submission.</p>
+            </section>
+
+            <section id="challenge-guidelines" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Challenge Guidelines</h2>
+                <p>To ensure fair play and a productive environment, please adhere to our challenge guidelines:</p>
+                <ul>
+                    <li>All submissions must be original work.</li>
+                    <li>Refer to specific challenge pages for detailed rules and permissible external resources.</li>
+                    <li>Collaboration is encouraged, but team submissions must be clearly declared.</li>
+                    <li>Any attempt to manipulate the leaderboard or evaluation system will result in disqualification.</li>
+                </ul>
+            </section>
+
+            <section id="data-formats" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Data Formats</h2>
+                <p>Our datasets are provided in standard formats for ease of use. Common formats include:</p>
+                <ul>
+                    <li><strong>Images:</strong> PNG, JPEG</li>
+                    <li><strong>Sensor Data:</strong> CSV, ROS bag files (for simulation data)</li>
+                    <li><strong>Annotations:</strong> JSON, XML (COCO format for object detection)</li>
+                </ul>
+                <p>Detailed schema and examples are available in each challenge's starter kit.</p>
+            </section>
+
+            <section id="model-submission" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Model Submission</h2>
+                <p>Models can be submitted in two primary ways:</p>
+                <ol>
+                    <li><strong>Trained Model Files:</strong> Upload your trained model weights (e.g., <code>.h5</code>, <code>.pth</code>, <code>.onnx</code>) along with a prediction script.</li>
+                    <li><strong>Containerized Code:</strong> For more complex models or custom environments, you can submit a Docker image containing your code and dependencies.</li>
+                </ol>
+                <p>Refer to the specific challenge's submission section for precise instructions and file size limits.</p>
+            </section>
+
+            <section id="evaluation-metrics" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Evaluation Metrics</h2>
+                <p>Model performance is typically evaluated based on a combination of accuracy and inference speed. Common metrics include:</p>
+                <ul>
+                    <li><strong>Accuracy:</strong> Mean Average Precision (mAP), F1-score, IoU (Intersection over Union)</li>
+                    <li><strong>Speed:</strong> Inference time per frame/sample (milliseconds)</li>
+                </ul>
+                <p>The exact weighting and primary metric for ranking will be specified on each challenge page.</p>
+            </section>
+
+            <section id="api-reference" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">API Reference (Coming Soon)</h2>
+                <p>We are developing a comprehensive API for programmatic access to challenge data, submission, and leaderboard information. Stay tuned for updates!</p>
+                <pre><code>// Example API Endpoint (Placeholder)
+GET /api/v1/challenges
+GET /api/v1/leaderboard/{challengeId}
+POST /api/v1/submit-model</code></pre>
+            </section>
+
+            <section id="faqs" class="section-spacing">
+                <h2 class="section-heading" style="text-align: left; margin-left: 0;">Frequently Asked Questions</h2>
+                <p>Find answers to common questions here. If you can't find what you're looking for, please visit our <a href="community.html">Community Forum</a>.</p>
+                <h3>Q: Can I use external datasets?</h3>
+                <p>A: Unless explicitly stated otherwise on the challenge page, only the provided datasets are allowed for training to ensure a fair competition.</p>
+                <h3>Q: What programming languages are supported?</h3>
+                <p>A: Our platform supports models developed in any language that can be containerized (e.g., Python, C++). Python with popular AI frameworks (TensorFlow, PyTorch) is most common.</p>
+                <h3>Q: How often is the leaderboard updated?</h3>
+                <p>A: The leaderboard updates in real-time as new submissions are evaluated. You'll see your rank change almost instantly.</p>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Open Traffic AI Lab. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About</a> |
+                <a href="challenges.html">Challenges</a> |
+                <a href="leaderboard.html">Leaderboard</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="margin-top: var(--space-md); font-size: var(--text-sm);">
+                Built with passion for autonomous innovation.
+            </p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
